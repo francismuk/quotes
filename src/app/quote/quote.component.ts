@@ -17,6 +17,13 @@ export class QuoteComponent implements OnInit {
         new Quote(6, 'Plot my world domination plan', 'Wambugu Karis'),
     ]
 
+    completeQuote(isComplete,index){
+      if (isComplete){
+          this.quotes.splice(index,1);
+          }
+          }
+
+
     toogleDetails(index){
       this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
@@ -26,3 +33,4 @@ export class QuoteComponent implements OnInit {
   ngOnInit() {
   }
 }
+
