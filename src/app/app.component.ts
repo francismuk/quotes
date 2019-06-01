@@ -5,5 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  quote = 'Watch Finding Nemo';
+  quote: string[];
+
+  constructor(){
+
+    this.quotes = ["Wherever life plants you, bloom with grace","The Way Get Started Is To Quit Talking And Begin Doing","Don’t Let Yesterday Take Up Too Much Of Today."];
+  }
 }
