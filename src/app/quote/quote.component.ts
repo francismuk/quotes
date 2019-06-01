@@ -17,6 +17,10 @@ export class QuoteComponent implements OnInit {
         new Quote(6, 'Plot my world domination plan', 'Wambugu Karis'),
     ]
 
+    toogleDetails(index){
+      this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
   constructor() { }
 
   ngOnInit() {
