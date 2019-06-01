@@ -9,12 +9,12 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
     quotes = [
-        new Quote(1,'Watch Finding Nemo'),
-        new Quote(2,'Buy Cookies'),
-        new Quote(3, 'Get new Phone Case'),
-        new Quote(4, 'Get Dog Food'),
-        new Quote(5, 'Solve math homework'),
-        new Quote(6, 'Plot my world domination plan'),
+        new Quote(1,'Watch Finding Nemo','By James Mwai'),
+        new Quote(2,'Buy Cookies', 'By Raphael Katana'),
+        new Quote(3, 'Get new Phone Case', 'By John Kariuki'),
+        new Quote(4, 'Get Dog Food', 'By Karanja Nguku'),
+        new Quote(5, 'Solve math homework', 'Virginia X'),
+        new Quote(6, 'Plot my world domination plan', 'Wambugu Karis'),
     ]
 
   constructor() { }
