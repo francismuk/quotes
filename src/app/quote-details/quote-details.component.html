@@ -2,5 +2,8 @@
 <p><strong> Author:  </strong>{{quote.author}}</p>
 <p><strong> Upvotes:  </strong>{{quote.upvotes}}</p>
 <p><strong> Downvotes:  </strong>{{quote.downvotes}}</p>
-<!-- <p>{{quote.posttime|timeCount}} hours ago</p> -->
+<p><strong> Modified :</strong>{{quote.date|dateCount}} hours ago</p>
 <button class="btn btn-danger" (click) = 'quoteDelete(true)'> Delete Quote </button>
+
+        <!-- <i class="fa fa-thumbs-up"></i>
+        <i class="fa fa-thumbs-down"></i> -->
