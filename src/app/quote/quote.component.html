@@ -4,11 +4,11 @@
     <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-</div>
+  </div>
 <ul>
     <div *ngFor='let quote of quotes;let i=index'>
-        <li >{{quote.name}}</li>
-        <button  (click)='toogleDetails(i)'>Show Details</button>
+        <li >{{quote.description}}</li>
+        <button  class="btn btn-info" (click)='toogleDetails(i)'>Show Details</button>
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
 
       </div>
