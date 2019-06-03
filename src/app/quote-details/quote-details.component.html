@@ -1,19 +1,30 @@
+<div class = "container">
 <div class="col-6 action" (click)="quote.upvotes = quote.upvotes + 1">
 <p><strong> Posted by:  </strong>{{quote.name}}</p>
 <p><strong> Author:  </strong>{{quote.author}}</p>
-<p><strong> Upvotes:  </strong>{{quote.upvotes}}</p>
-<p><strong> Downvotes:  </strong>{{quote.downvotes}}</p>
 <p><strong> Modified :</strong>{{quote.date|dateCount}} hours ago</p>
+<div class="row">
+<div class="col-2 action">
+<p><strong> Upvotes:  </strong>{{quote.upvotes}}</p>
+</div>
+<div class="col-2 action">
+<p><strong> Downvotes:  </strong>{{quote.downvotes}}</p>
+</div>
+</div>
 
   <div class="row">
-    <div class="col-3 action" (click)="quote.upvotes = quote.upvotes + 1">
-        <button type="submit"><i class="fa fa-thumbs-up"></i></button>
+      <div class="col-2 action"(click)="quote.upvotes = quote.upvotes + 1">
+          <button class="btn btn-success" type="submit"><i class="fa fa-thumbs-up">Like</i></button>
+        </div>
+    <div class="col-2 action" (click)="quote.downvotes = quote.downvotes + 1">
+      <button class="btn btn-warning" type="submit"><i class="fa fa-thumbs-down">Dislike</i></button>
     </div>
-    <div class="col-3 action" (click)="quote.downvotes = quote.downvotes + 1">
-      <button type="submit"><i class="fa fa-thumbs-down"></i></button>
-    </div>
-
-<button class="btn btn-danger" (click) = 'quoteDelete(true)'> Delete Quote </button>
+  </div>
+  <br>
+    <div class="col-6 action">
+<button class="btn btn-danger" (click) = 'quoteDelete(true)'><i class="fa fa-trash">Delete Quote</i></button>
 </div>
+</div>
+
 
 
