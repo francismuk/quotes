@@ -8,7 +8,7 @@ export class Quote {
     public upvotes: number,
     public downvotes: number
     ) {
-      // this.showDescription = false;
+      this.showDescription = false;
 
   }
 }
