@@ -21,7 +21,7 @@ export class QuoteComponent implements OnInit {
         new Quote(6, 'James Mwai', '“Imagine Your Life Is Perfect In Every Respect; What Would It Look Like?”', 'Brian Tracy', 0, 0, new Date(2019, 4, 27, 23, 1)),
     ];
 
-    deleteQuote(isComplete, index) {
+    deleteQuote(isComplete: any, index: number) {
       if (isComplete) {
           const toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`);
 
@@ -31,7 +31,7 @@ export class QuoteComponent implements OnInit {
       }
     }
 
-    completeQuote(isComplete, index) {
+    completeQuote(isComplete: any, index: number) {
       if (isComplete) {
           this.quotes.splice(index, 1);
           }
@@ -39,17 +39,17 @@ export class QuoteComponent implements OnInit {
 
 
 
-          addNewQuote(quote) {
+          addNewQuote(quote: Quote) {
             const quoteLength = this.quotes.length;
             quote.id = quoteLength + 1;
             this.quotes.push(quote);
 
         }
-        addVotes(index){
+        addVotes(index: string | number) {
           this.quotes[index].vote += 1;
         }
 
-    toogleDetails(index) {
+    toogleDetails(index: string | number) {
       this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
